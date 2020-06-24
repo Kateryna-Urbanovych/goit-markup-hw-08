@@ -1,0 +1,36 @@
+.footer-socials {
+  margin-right: 94px;
+
+  &-caption {
+    @extend %footer-caption;
+  }
+
+  &-list {
+    @extend %list;
+    display: flex;
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.footer-socials-icon {
+  @extend %link;
+  @extend %centered-flex;
+  @extend %socials-icon;
+
+  fill: $white-color;
+  background-color: $footer-icon-bgc;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  > span {
+    @extend %visually-hidden;
+  }
+}

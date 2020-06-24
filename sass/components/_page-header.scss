@@ -1,0 +1,30 @@
+// Page-header + Main-nav
+
+.page-header {
+  // Это для фиксированого header
+  // position: fixed;
+  // top: 0;
+  // left: 50%;
+  // transform: translateX(-50%);
+  // z-index: 100;
+  // width: 100%;
+
+  min-height: 79px;
+  background-color: $white-color;
+  border-bottom: 1px solid $border-header-color;
+
+  > .container,
+  .main-nav,
+  .site-nav,
+  .contacts {
+    @extend %centered-flex;
+  }
+}
+
+.no-border {
+  border-bottom: 0;
+}
+
+.main-nav {
+  margin-right: auto;
+}

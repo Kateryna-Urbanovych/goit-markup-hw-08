@@ -1,0 +1,49 @@
+.features {
+  @extend %section-padding;
+
+  &-title {
+    @extend %section-title;
+    @extend %visually-hidden;
+  }
+
+  &-list {
+    @extend %list;
+    display: flex;
+  }
+
+  &-item {
+    width: calc((100%-90px) / 4);
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-icon {
+    @extend %centered-flex;
+    margin-bottom: 30px;
+    height: 120px;
+
+    background-color: $secondary-bgc;
+    border-radius: 4px;
+  }
+
+  &-subtitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 1.71;
+
+    color: $primery-text-color;
+  }
+}

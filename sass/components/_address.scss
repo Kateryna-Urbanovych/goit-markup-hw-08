@@ -1,0 +1,25 @@
+.address {
+  margin-right: 69px;
+}
+
+.address-contacts {
+  display: flex;
+  flex-direction: column;
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  > a {
+    @extend %link;
+    color: $footer-text-color;
+  }
+
+  > a.white {
+    color: $white-color;
+  }
+
+  > a:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
