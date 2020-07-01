@@ -1,8 +1,0 @@
-.portfolio {
-  @extend %section-padding;
-
-  &-title {
-    @extend %section-title;
-    @extend %visually-hidden;
-  }
-}
