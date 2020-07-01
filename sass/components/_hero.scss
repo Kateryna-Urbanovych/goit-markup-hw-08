@@ -1,5 +1,5 @@
 .hero {
-  max-width: 100vw;
+  // max-width: 100vw;
   margin-left: auto;
   margin-right: auto;
 
@@ -7,7 +7,8 @@
   flex-direction: column;
   text-align: center;
 
-  width: 480px;
+  // width: 480px;
+  max-width: 1600px;
   height: 400px;
 
   background-color: $section-bgc;
@@ -25,7 +26,7 @@
   }
 
   @media screen and (min-width: 481px) {
-    width: 768px;
+    // width: 768px;
     background-image: linear-gradient($section-bgc, $section-bgc),
       url('../images/hero-tablet.jpg');
 
@@ -38,7 +39,7 @@
   }
 
   @media screen and (min-width: 769px) {
-    max-width: 1600px;
+    // max-width: 1600px;
     height: 600px;
     background-image: linear-gradient($section-bgc, $section-bgc),
       url('../images/hero-desktop.jpg');
