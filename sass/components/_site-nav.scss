@@ -1,20 +1,36 @@
 .site-nav {
   @extend %list;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 305px;
+  }
 }
 
 .site-nav-item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav-link {
   @extend %link;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: inline-block;
 
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
   letter-spacing: 0.02em;
 
   color: $title-text-color;
@@ -25,9 +41,21 @@
     color: $accent-color;
   }
 
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.15;
+  }
+
   &.current {
     position: relative;
     color: $accent-color;
+
+    @media screen and (max-width: 767px) {
+      padding-bottom: 8px;
+    }
   }
 
   &.current::after {

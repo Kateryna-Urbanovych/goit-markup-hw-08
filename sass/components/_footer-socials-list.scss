@@ -1,6 +1,4 @@
 .footer-socials {
-  margin-right: 94px;
-
   &-caption {
     @extend %footer-caption;
   }
@@ -8,6 +6,11 @@
   &-list {
     @extend %list;
     display: flex;
+
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+      margin-bottom: 60px;
+    }
   }
 
   &-item:not(:last-child) {

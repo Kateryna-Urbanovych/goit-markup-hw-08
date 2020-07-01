@@ -5,6 +5,7 @@
   border-radius: 4px;
   box-shadow: 0px 4px 4px $button-shadow-color;
 
+  font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
 
@@ -16,7 +17,6 @@
   @extend %button;
   display: inline-flex;
   padding: 10px 32px;
-  font-weight: 700;
 }
 
 .button-subscribe {
@@ -26,7 +26,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 28px 10px 29px;
-  font-weight: 900;
+
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .button-form-order {
@@ -35,8 +39,6 @@
   margin-left: auto;
   margin-right: auto;
   padding: 10px 55px 10px 56px;
-
-  font-weight: 700;
 
   @include transition(background-color);
 

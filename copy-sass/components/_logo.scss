@@ -1,0 +1,27 @@
+%logo {
+  display: block;
+  font-family: $logo-font;
+  font-weight: 700;
+}
+
+.logo-header {
+  @extend %logo;
+  @extend %link;
+  margin-right: 85px;
+
+  font-size: 26px;
+  color: $title-text-color;
+}
+
+.logo-footer {
+  @extend %logo;
+  @extend %link;
+  margin-bottom: 10px;
+
+  font-size: 22px;
+  color: $white-color;
+}
+
+.logo-accent {
+  color: $accent-color;
+}

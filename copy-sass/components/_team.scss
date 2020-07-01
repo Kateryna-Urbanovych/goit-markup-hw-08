@@ -1,0 +1,45 @@
+.team {
+  @extend %section-padding;
+  background-color: $secondary-bgc;
+
+  &-title {
+    @extend %section-title;
+  }
+
+  &-list {
+    @extend %list;
+    display: flex;
+  }
+}
+
+.team-card {
+  // width: 270px;
+  width: calc((100% - 90px) / 4);
+  overflow: hidden;
+  text-align: center;
+
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 1px $backdrop-bgc, 0px 1px 1px $box-shadow-card-color3,
+    0px 1px 3px $box-shadow-card-color2;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-content {
+    padding: 30px 31px 24px 32px;
+    background-color: $white-color;
+  }
+
+  &-name {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  &-profession {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: $primery-text-color;
+  }
+}

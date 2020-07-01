@@ -8,15 +8,36 @@
 
   &-list {
     @extend %list;
-    display: flex;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-wrap: wrap;
+      margin: -15px;
+    }
   }
 
   &-item {
-    width: calc((100%-90px) / 4);
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-basis: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 3 * 30px) / 4);
+    }
   }
 
   &-item:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
   }
 
   &-icon {
@@ -35,6 +56,10 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &-text {

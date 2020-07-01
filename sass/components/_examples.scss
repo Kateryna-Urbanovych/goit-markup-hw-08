@@ -1,14 +1,28 @@
 .examples-list {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .examples-card {
-  // width: 370px;
-  width: calc((100% - 90px) / 3);
-  margin: 15px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 
   box-shadow: none;
 
@@ -22,20 +36,37 @@
 
   & > a {
     @extend %link;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   &-thumb {
     position: relative;
     overflow: hidden;
+    height: 294px;
+  }
+
+  &-thumb > img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   &-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 63px 24px;
     margin: 0;
+    padding: 77px 24px;
+
+    @media screen and (min-width: 768px) {
+      padding: 49px 24px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 63px 24px;
+    }
 
     font-size: 18px;
     line-height: 1.56;
@@ -53,6 +84,8 @@
   }
 
   &-content {
+    flex-grow: 1;
+
     padding: 20px 24px;
     border-right: 1px solid $border-card-color;
     border-bottom: 1px solid $border-card-color;

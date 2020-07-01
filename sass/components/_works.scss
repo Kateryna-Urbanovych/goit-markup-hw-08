@@ -1,6 +1,10 @@
 .works {
   @extend %section-padding;
 
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
   &-title {
     @extend %section-title;
   }
@@ -12,7 +16,7 @@
 
   &-item {
     position: relative;
-    width: calc((100%-60px) / 3);
+    width: calc((100% - 2 * 30px) / 3);
   }
 
   &-item:not(:last-child) {

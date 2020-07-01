@@ -8,14 +8,30 @@
   &-list {
     @extend %list;
     display: flex;
+
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
+      margin: -15px;
+    }
   }
 }
 
 .clients-item {
-  width: calc((100% - 150px) / 6);
+  @media screen and (max-width: 1199px) {
+    margin: 15px;
+  }
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  flex-basis: calc((100% - 2 * 30px) / 2);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 5 * 30px) / 6);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -35,7 +51,7 @@
   &:focus {
     fill: $accent-color;
     @include border($accent-color);
-    transform: scale(1.25);
+    transform: scale(1.1);
   }
 
   span {

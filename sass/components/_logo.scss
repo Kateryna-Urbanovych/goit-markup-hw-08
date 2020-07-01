@@ -2,23 +2,37 @@
   display: block;
   font-family: $logo-font;
   font-weight: 700;
+  font-size: 24px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+  }
 }
 
 .logo-header {
   @extend %logo;
   @extend %link;
-  margin-right: 85px;
 
-  font-size: 26px;
   color: $title-text-color;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 81px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 85px;
+  }
 }
 
 .logo-footer {
   @extend %logo;
   @extend %link;
-  margin-bottom: 10px;
-
-  font-size: 22px;
+  margin-bottom: 20px;
   color: $white-color;
 }
 

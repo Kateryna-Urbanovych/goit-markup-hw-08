@@ -1,0 +1,40 @@
+.works {
+  @extend %section-padding;
+
+  &-title {
+    @extend %section-title;
+  }
+
+  &-list {
+    @extend %list;
+    display: flex;
+  }
+
+  &-item {
+    position: relative;
+    width: calc((100%-60px) / 3);
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-subtitle {
+    position: absolute;
+    bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $white-color;
+    background-color: $section-bgc;
+  }
+}

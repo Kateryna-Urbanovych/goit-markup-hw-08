@@ -1,0 +1,81 @@
+.examples-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.examples-card {
+  // width: 370px;
+  width: calc((100% - 90px) / 3);
+  margin: 15px;
+
+  box-shadow: none;
+
+  @include transition(box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px $box-shadow-card-color4,
+      0px 4px 4px $box-shadow-card-color1, 0px 1px 1px $box-shadow-card-color2;
+  }
+
+  & > a {
+    @extend %link;
+    display: block;
+  }
+
+  &-thumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.56;
+
+    color: $white-color;
+    background-color: $accent-secondary-color;
+
+    transform: translateY(100%);
+    @include transition(transform);
+  }
+
+  &:hover &-overlay,
+  &:focus &-overlay {
+    transform: translateY(0);
+  }
+
+  &-content {
+    padding: 20px 24px;
+    border-right: 1px solid $border-card-color;
+    border-bottom: 1px solid $border-card-color;
+    border-left: 1px solid $border-card-color;
+  }
+
+  &-title {
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: $title-text-color;
+  }
+
+  &-text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    line-height: 1.88;
+
+    color: $primery-text-color;
+  }
+}

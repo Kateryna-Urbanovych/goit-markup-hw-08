@@ -1,7 +1,10 @@
 .team-socials-list {
   @extend %list;
-  display: flex;
-  justify-content: space-between;
+  @extend %centered-flex;
+
+  & > li:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .team-socials-icon {
@@ -12,8 +15,7 @@
   fill: $border-clients-color;
   background-color: $white-color;
 
-  @include transition(fill);
-  @include transition(background-color);
+  @include transition(all);
 
   &:hover,
   &:focus {

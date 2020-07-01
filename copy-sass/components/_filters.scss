@@ -1,0 +1,38 @@
+.filters-list {
+  @extend %list;
+  @extend %centered-flex;
+  margin-bottom: 50px;
+}
+
+.filters-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filters-button {
+  cursor: pointer;
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: inherit;
+
+  border: none;
+  border-radius: 4px;
+
+  color: inherit;
+  background-color: $secondary-bgc;
+  box-shadow: none;
+
+  @include transition(all);
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 2px 2px $box-shadow-card-color2,
+      0px 1px 2px $box-shadow-card-color5, 0px 3px 1px $border-icon-close-form;
+  }
+}
